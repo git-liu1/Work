@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3d贺年卡</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 100vh;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2c3e50;
+        }
+        
+        .card {
+            width: 300px;
+            height: 200px;
+            background: #e67e22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #ecf0f1;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotateX(45deg) rotateY(25deg);
+        }
+        
+        .card:before,
+        .card:after {
+            background: #e74c3c;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            transition: 2s;
+        }
+        
+        .card::before {
+            content: '新年';
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            transform-origin: left;
+            border: solid 2px #333;
+            box-sizing: border-box;
+            padding-right: 10px;
+        }
+        
+        .card::after {
+            content: '快乐';
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            transform-origin: right;
+            border: solid 2px #333;
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+        
+        .card:hover::before {
+            transform: rotateY(-180deg);
+        }
+        
+        .card:hover::after {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        小刘喜欢码农
+    </div>
+</body>
+
+</html>

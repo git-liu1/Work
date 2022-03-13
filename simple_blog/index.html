@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人博客</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="描述">
+		<link href="images/photo.ico" rel="icon">
+		<embed hidden="true" src="music/music.mp3" border="0px" width="0px" height="0px" autostart="false" loop> </embed >
+		<style>
+			html,body,ul,a{
+				width: 100%;
+				margin:0;
+				padding: 0;
+				cursor: url("images/photo.ico"),auto;
+			}
+			#header{
+				width: 100%;
+				height: 360px;
+				background-image: url('images/bg.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				margin-bottom: 22px;
+			}
+			#header:hover{
+				background-image: url(images/bg2.jpg);
+			}
+			.nav{
+				width: 1000px;
+				height: 40px;
+				margin:0 auto;
+			}
+			ul{
+				list-style-type: none;
+			}
+			.nav ul li{
+				padding-bottom: 5px;
+				display: inline;
+				font-size: 18px;
+				font-family:Hiragino Sans GB W3;
+				color: #fff;
+				line-height: 40px;
+				margin-right: 36px;
+			}
+			.title{
+				width:1000px;
+				height: 86px;
+				margin: 228px auto;
+				color: #fff;	
+				display: flex;
+
+			}
+			li:hover{
+				border-bottom: 3px solid #fff;
+			}
+			a{
+				text-decoration: none;
+				color: #fff;
+			}
+			.title h1{
+				font-size:56px;
+				font-weight:bold;
+				line-height: 1px;
+				margin-right:30px; 
+			}
+			.title h3{
+				line-height: 86px;
+			}
+
+			#main{
+				width: 100%;
+				background-color: #E0FFFF
+			}
+			#main ul{
+				width: 100%;
+			}
+			#main ul li{
+				width: 1000px;
+				height: 290px;
+				margin:0 auto;
+				border-bottom: 5px solid #b2e5d5;
+			}
+			.one{
+				position: relative;
+				float: left;
+				width: 450px;
+				height: 240px;
+				margin-top: 25px;
+				overflow: hidden;
+			}
+			.one img{
+				width: 100%;
+				transition: 1s;
+			}
+			.hide{
+				position: absolute;
+				width: 450px;
+				height:240px;
+				left: 0;
+				top:170px;
+				padding: 30px;
+				color: #fff;
+				font-size: 30px;
+				background-color: rgba(0,0,0,0.8);
+				transition: 1s
+			}
+			.one:hover .hide{
+				top: 0;
+			}
+			.one:hover img{
+				transform: scale(1.2);
+			}
+			.two{
+				float: right;
+				width: 502px;
+				height: 240px;
+				margin-top: 25px;
+				line-height: 35px;
+			}
+			</style>	
+	</head>
+	<body>
+      <div id="header">
+      	<div class="nav">
+      		<ul>
+      			<li><a href="">分类</a></li>
+      			<li><a href="">目标</a></li>
+      			<li><a href="">友链</a></li>
+      			<li><a href="">留言</a></li>
+      			<li><a href="">关于</a></li>
+      		</ul>
+      	</div>
+      	<div class="title">
+      		<h1><a href="">IT bolg</a></h1>
+      		<h3><a href="">可怜的it狗</a></h3>
+      	</div>
+      </div>
+      <div id="main">
+      	<ul>
+      		<li>
+      			<div class="one">
+      				<img src="images/1.jpg">
+      				<div class="hide"><a href="#" target="_blank">Basic</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					Basic
+						微软公司上个世纪八十年代推出的计算机语言，当时造成了计算机软件开发世界的强烈震动，它的出现将很多程序员由枯燥的编码中解放出来，而有更多的精力来进行程序结构的开发。但是，Basic同C、Pascal语言一样，是结构化语言，在对待大型开发中会觉得逐渐力不从心，程序员需要关注的内容实在太多了。其实现在来说，学习Basic已经没有什么意义了。因为它的改进版本Visual Basic和Visual Basic.NET无论是在功能上还是在实用性上都大大地超过了他们的祖先。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/2.jpg">
+      				<div class="hide"><a href="#" target="_blank">大数据</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					大数据行业，这个跟人工智能行业都是近两年才火起来的行业，但这并不意味着他们只是昙花一现，其实这些岗位已经存在很多年了，只不过这些领域在近几年终于有了很大的突破和普及，自然受欢迎的程度也变大了，而且对它们的未来发展，可是整个行业都看好的，很多行内人都在重新学习这方面的知识，更不用说我们想要进入IT行业的新人了，也是非常不错的选择。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/3.jpg">
+      				<div class="hide"><a href="#" target="_blank">Pascal</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					Pascal
+						结构化语言，语法结构严谨，易于教学。相对于C语言，缺乏一定的灵活性。但是正是其严谨的语法，很多Pascal程序员倾心于其“诗篇一样的结构”，曾经一直是大专院校计算机专业必学的语言。它的改进版本Object Pascal和Delphi都超过了它。
+					</p>
+      			</div>
+      		</li>
+      		<li>
+      			<div class="one">
+      				<img src="images/4.jpg">
+      				<div class="hide"><a href="#" target="_blank">C</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					C
+						上个世纪七十年代由贝尔实验室开发，当时他们是为了解决一个实际问题，将B语言改进后得到的，后来贝尔实验室又用它重写了UNIX操作系统。是所有工科学生和计算机学生必须学习的语言。它的特点很多了：贴近硬件，执行效率高，使用灵活,功能强大。但它毕竟还是结构化编程语言。在进行大型开发上显得还是有点力不从心，往往编程人员需要绞尽脑汁想出各种“精巧”的算法来实现某个目的。不过在学习操作系统和进行单片机开发上，它的作用是举足轻重的。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/5.jpg">
+      				<div class="hide"><a href="#" target="_blank">C++</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					
+						C++
+						C语言的改进版本，保留了C语言所有特性的同时添加进了面向对象思想。这个特性导致了他在很多大型开发上有得天独厚的优势。在很多领域中有很强的生命力，直至今日，此语言还是在不断发展中，新技术曾出不穷。关于C++的介绍是在实太多了，网上随便一搜一大堆。我就不多说了。
+					</p>
+      			</div>
+      		</li>
+      		<li>
+      			<div class="one">
+      				<img src="images/6.jpg">
+      				<div class="hide"><a href="#" target="_blank">C#</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+						C#
+						它是一种现代的，面向对象的语言，它结合了C/C++和Visual C++的强大功能以及Visual Basic的易用性。具有简单、面向对象、类型安全、可以进行Dll版本控制、兼容性好、灵活等诸多特点。使得它成为了一个很有潜力的新生代语言。再加上互联网的高速发展和微软的强大技术支持，应该是比较有前途的。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/7.jpeg">
+      				<div class="hide"><a href="#" target="_blank">ASP/ASP.NET/PHP/Perl</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					ASP/ASP.NET/PHP/Perl
+						这些都是网页开发使用的语言。所有有志于网页开发的朋友应该考虑他们，我其实不是很熟悉这些语言（只简单的接触过ASP），不敢乱说，以免误人子弟。有兴趣的朋友可以考虑一下。
+					</p>
+      			</div>
+      		</li>
+      		<li>
+      			<div class="one">
+      				<img src="images/8.jpg">
+      				<div class="hide"><a href="#" target="_blank">Visual Baisc、Visual Baisc.NET</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					Visual Baisc、Visual Baisc.NET
+						它们都是由basic改进而来。其中Visualbasic是解释型语言，编译速度快，可以实时调试，但它并不是完全的面向对象，多线程开发比较困难。但其最大的优点是简单！VisualBaisc.NET是基于微软.net平台的新的语言，（注意它和VisualBasic是完全不同的语言）面向对象，可以进行嵌入式开发。与asp.NET结合紧密。并且在性能上大大提高。可以说也很有发展前途。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/9.jpg">
+      				<div class="hide"><a href="#" target="_blank">Visual C++/C++ Builder</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					Visual C++/C++ Builder
+						都是C++语言的开发环境，可以使用户更方便的开发Windows程序。Visual C++是微软公司的产品，而C++ Builder是Borland 公司的产品。
+					</p>
+      			</div>
+      		</li>
+      			<li>
+      			<div class="one">
+      				<img src="images/10.jpg">
+      				<div class="hide"><a href="#" target="_blank">java</a>
+      				</div>
+      			</div>
+      			<div class="two">
+      				<p>
+      					java、
+						java是对c大大的大大的改进。有统一的标准，丰富的库，完全的面向对象。也继承了c的一些特点，无所不包的全功能，深入系统底层的编程的灵活性。但因为java学习了c的深入系统底层的特点，它的语言就严格、呆板、罗索。另外，java要跨平台，它的速度就非常令人不满意，只能局限在高级应用方面。在速度上，可以选择微软的net和苹果的coco。他们也同样是底层的面向对象语言。作为高级的应用程序，如果没有保密要求，脚本语言是最合适的。
+					</p>
+      			</div>
+      		</li>
+      	</ul>
+      </div>
+	</body>
+</html>

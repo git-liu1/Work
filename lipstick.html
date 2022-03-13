@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .lipstick {
+            position: relative;
+            width: 107px;
+            height: 408px;
+            /*background-color:#ff0000;*/
+            margin: 200px auto;
+            animation: lipstick 5s infinite;
+        }
+        
+        .base {
+            position: absolute;
+            left: 16px;
+            bottom: 11px;
+            width: 80px;
+            height: 154px;
+            border-radius: 0 0 42px 42px;
+            background-color: #000000;
+        }
+        
+        .base:before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            bottom: 145px;
+            width: 70px;
+            height: 107px;
+            border-radius: 42px/20px;
+            background-color: #d0d0d0;
+        }
+        
+        .tip {
+            position: absolute;
+            left: 30px;
+            bottom: 242px;
+            width: 53px;
+            height: 130px;
+            border-top-left-radius: 59px 141px;
+            border-top-right-radius: 59px 141px;
+            background-color: #ff0099;
+            animation: tip 5s infinite;
+        }
+        
+        .top {
+            position: absolute;
+            left: 16px;
+            bottom: 152px;
+            width: 80px;
+            height: 154px;
+            border-radius: 42px/20px;
+            background-color: #000000;
+            animation: top 5s infinite;
+        }
+        
+        @keyframes top {
+            from {
+                bottom: 152px;
+                left: 16px;
+                transform: rotate(0);
+            }
+            to {
+                bottom: 400px;
+                left: 46px;
+                transform: rotate(30deg);
+            }
+        }
+        
+        @keyframes tip {
+            from {
+                height: 0;
+            }
+            to {
+                height: 130px;
+            }
+        }
+        
+        @keyframes lipstick {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(30deg);
+                ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lipstick">
+        <div class="base"></div>
+        <div class="tip"></div>
+        <div class="top"></div>
+    </div>
+</body>
+
+</html>

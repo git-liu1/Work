@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>字体背景</title>
+    <style type="text/css">
+        html,
+        body {
+            background: #f1503f;
+            height: 100%;
+        }
+        
+        h1 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .background-clip {
+            background: url('img/1.jpeg');
+            background-repeat: repeat-x;
+            background-position: 0 0;
+            font-size: 100px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Luckiest Guy';
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            animation: BackgroundAnimated 15s linear infinite;
+        }
+        
+        @keyframes BackgroundAnimated {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+        
+        @keyframes BackgroundAnimated {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="background-clip">Clip Text</h1>
+</body>
+
+</html>

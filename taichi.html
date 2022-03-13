@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="乌拉老师">
+    <title>太极图</title>
+    <style>
+        body {
+            background-color: #e3e2e2;
+        }
+        
+        .box1 {
+            margin: 100px auto;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(black 50%, white 50%);
+            /*linear-gradient：创建一个线性渐变*/
+            display: flex;
+            align-items: center;
+            animation: tj 3s infinite linear;
+            /*linear：匀速*/
+        }
+        
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(white 25%, black 25%);
+        }
+        
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(black 25%, white 25%);
+        }
+        
+        @keyframes tj {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		header{
+			position: relative;
+			height: 45px;
+			line-height: 45px;
+			background-color: #fa486c;
+			color: #fff;
+			text-align: center;
+			font-family: '宋体';
+			font-weight: bold;
+		}
+		header a{
+			position: absolute;
+			top: 1px;
+			left: 10px;
+			float: left;
+			color: #fff;
+		}
+		heder span{
+			font-size: 20px;
+		}
+		.wlxx{
+			/* width: 1000px; */
+			height: 70px;
+			display: flex;
+		}
+		.wl1{
+			flex-grow: 2;
+			background: url('img/menu.png') no-repeat center;
+			background-size: 60px;
+		}
+		.wl2{
+			flex-grow: 1;
+			background: url('img/arrow.png') no-repeat center;
+			background-size: 15px;
+		}
+		.hwxx{
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 15px 0px;
+		}
+		.hwxx h1,.zfxx h1{
+			font-size: 20px;
+			font-weight: normal;
+			border-left: 2px solid #fa486c;
+			margin-left: 15px;
+			padding-left: 10px;
+			margin-bottom: 15px;
+		}
+		.hwxx-main{
+			margin-top: 1px solid #ddd;
+			padding-left: 15px;
+		}
+		.hwxx-main p{
+			margin-top: 10px;
+		}
+		.hwxx-main p span{
+			color: gray;
+		}
+		.hwxx-main p i{
+			font-style: normal;
+		} 
+		.zfxx{
+			margin-top: 15px;
+		}
+		.del{
+			text-decoration: line-through;
+		}
+		.tj a{
+			display: block;
+			width: 80%;
+			margin: 0px auto;
+			height: 40px;
+			border: 1px solid #ddd;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 18px;
+			color: gray;
+			margin-top: 20px;
+		}
+		.tj a:hover{
+			background-color: #fa486c;
+			color: #fff;
+			border: 1px solid #fa486c;
+		}
+		.ts{
+			padding-left: 20px;
+			margin-top: 40px;
+			margin-bottom: 70px;
+		}
+		.ts p{
+			font-size: 12px;
+		}
+		.ts p:first-child{
+			color: gray;
+		}
+		footer{
+			height: 50px;
+			width: 100%;
+			border-top: 1px solid  #ddd;
+			position: fixed;
+			bottom: 0;
+			background-color: #fff;
+			display: flex;
+		}
+		footer div{
+			 flex-grow: 1;
+			 color: gray;
+		}
+		.index{
+			background: url('img/home.png') no-repeat center 5px;
+			background-size: 30px;
+			text-align: center;
+			line-height: 90px;
+		}
+		.index:hover{
+			background: url('img/home2.png') no-repeat center 5px;
+			background-size: 30px;
+			color: #fa486c;
+		}
+		.dd{
+			background: url('img/menu2.png') no-repeat center 5px;
+			background-size: 30px;
+			text-align: center;
+			line-height: 90px;
+		}
+		.dd:hover{
+			background: url('img/menu.png') no-repeat center 5px;
+			background-size: 30px;
+			color: #fa486c;
+		}
+		.self{
+			background: url('img/user.png') no-repeat center 5px;
+			background-size: 30px;
+			text-align: center;
+			line-height: 90px;
+		}
+		.self:hover{
+			background: url('img/user2.png') no-repeat center 5px;
+			background-size: 30px;
+			color: #fa486c;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="#">&lt;返回</a>
+		<span>订单详情</span>
+	</header>
+	<div class="wlxx">
+		<div class="wl1"></div>
+		<div class="wl2"></div>
+		<div class="wl1"></div>
+		<div class="wl2"></div>
+		<div class="wl1"></div>
+		<div class="wl2"></div>
+		<div class="wl1"></div>
+		</div>
+		<div class="hwxx">
+		<h1>货物信息</h1>
+		<div class="hwxx-main">
+			<p>
+			      <span>商品名称：</span>
+				<i>YSL圣罗兰口红</i>
+			</p>
+			<p>
+			     <span>商品编号：</span>
+				<i>Y12341231</i>
+			     </p>
+			<p>
+			     <span>商品价格：</span>
+				<i>￥320</i>	   
+			   </p>
+			<p>
+			   <span>收货地址：</span>
+				<i>西三旗桥东神州科技园尚学堂</i>
+			</p>
+			</div>
+
+		</div>
+		<div class="zfxx">
+		<h1>支付信息</h1>
+		<div class="hwxx-main">
+			<p>
+			      <span>原价格：</span>
+				<i class="del">&yen;400</i>
+			</p>
+			<p>
+			     <span>实际价格：</span>
+				<i>￥320</i>	   
+			   </p>
+			<p>
+			   <span>支付方式：</span>
+				<i>微信支付</i>
+			</p>
+			</div>
+		</div>
+		<div class="tj">
+			<a href="#">提交订单</a>
+		</div>
+		<div class="ts">
+			<p>温馨提示</p>
+			<p>成功派单之后，不可取消订单。</p>
+			<p>选择以下只支付方式的，我们的服务人员会当面为您收取服务款。</p>
+		</div>
+	<footer>
+		<div class="index">首页</div>
+		<div class="dd">订单</div>
+		<div class="self">我的</div>
+	</footer>
+</body>
+</html>

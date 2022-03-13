@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>简易相册</title>
+    <style type="text/css">
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .album {
+            position: relative;
+            width: 700px;
+            height: 400px;
+            background: url('images/bg.jpg') no-repeat 0/cover;
+            margin: 50px auto 0 auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 6px 20px;
+        }
+        
+        ul {
+            width: 180px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+        
+        ul li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            border: 1px solid #fff;
+        }
+        
+        ul li:nth-child(odd) {
+            margin-right: 16px;
+        }
+        
+        ul li:nth-child(-n+4) {
+            margin-bottom: 16px;
+        }
+        
+        ul li img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        ul li .content {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 450px;
+            height: 360px;
+            background-color: blue;
+            opacity: 0;
+            box-shadow: 0 0 20px 0 #000;
+            transition: 1s;
+        }
+        
+        ul li:nth-child(1) .content {
+            opacity: 1;
+        }
+        
+        ul li:hover .content {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="album">
+        <ul class="clearfix">
+            <li>
+                <img src="images/1.jpg">
+                <div class="content">
+                    <img src="images/1.jpg">
+                </div>
+            </li>
+            <li>
+                <img src="images/2.jpg">
+                <div class="content">
+                    <img src="images/2.jpg">
+                </div>
+            </li>
+            <li>
+                <img src="images/3.jpg">
+                <div class="content">
+                    <img src="images/3.jpg">
+                </div>
+            </li>
+            <li>
+                <img src="images/4.jpg">
+                <div class="content">
+                    <img src="images/4.jpg">
+                </div>
+            </li>
+            <li>
+                <img src="images/5.jpg">
+                <div class="content">
+                    <img src="images/5.jpg">
+                </div>
+            </li>
+            <li>
+                <img src="images/6.jpg">
+                <div class="content">
+                    <img src="images/6.jpg">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

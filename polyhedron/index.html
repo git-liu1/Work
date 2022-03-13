@@ -1,0 +1,93 @@
+<!doctye html>
+<html>
+
+<head>
+    <meta>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>华丽的多边形</title>
+    <style>
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .box {
+            position: relative;
+            width: 980px;
+            height: 500px;
+            margin: 100px auto;
+        }
+        
+        .box ul li {
+            float: left;
+            width: 180px;
+            height: 105px;
+            margin: 30px 5px;
+            background-color: rgb(0, 0, 0, .7);
+        }
+        
+        body {
+            background-image: url('images/bg.jpg');
+        }
+        
+        .box ul li:nth-child(9n-3) {
+            margin-left: 100px;
+        }
+        
+        .box ul li:before,
+        .box ul li:after {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 105px;
+            transform: rotate(60deg);
+            background-color: rgba(0, 0, 0, .7);
+        }
+        
+        .box ul li:after {
+            content: '';
+            transform: rotate(-60deg);
+        }
+        
+        .box ul li img {
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 10;
+            z-index: 1;
+        }
+        
+        .box ul li img:hover {
+            transition: all 1s;
+            transform: scale(1.5) rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="images/1.png" width="" height="" alt="" title=""></li>
+            <li><img src="images/2.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/3.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/4.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/5.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/6.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/7.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/8.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/9.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/10.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/11.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/12.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/13.png" width="" height="" alt="" title=""> </li>
+            <li><img src="images/14.png" width="" height="" alt="" title=""> </li>
+        </ul>
+
+
+    </div>
+</body>
+
+</html>

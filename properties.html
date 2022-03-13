@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS过渡效果属性</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100vw;
+			height: 100vh;
+			background: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: #9b59b6;
+			transition-duration: 2s;
+			/* transition-property: background,border-radius,width,height; */
+			transition-property: all;
+			border: solid 20px white;
+		}
+		div:hover{
+			background: #e74c3c;
+			border-radius: 50%;
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

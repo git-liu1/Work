@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="乌拉老师">
+        <title>canvas</title>
+       <style type="text/css">
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-color: #494a5f;
+        }
+        div{
+          overflow: hidden;
+          width: 440px;
+          height: 320px;
+          margin: 100px auto;
+          background-image: url('images/img-1.jpg');
+          font-size: 0;
+          box-shadow:0 0 10px #fff ;
+          /*第一个值表示X轴的偏移量，第二个值表示Y轴的偏移量，第三个值表示羽化程度，第四个表示颜色值*/
+          cursor: pointer;
+        }
+        span{
+          display: inline-block;   /*行内块*/
+          width: 25%;
+          height: 100%;
+          background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8));
+          transform: translateY(-100%);
+          transition-duration: 0.3s;  /*样式过渡时间*/
+          
+
+        }
+        div:hover span{
+          transform: translateY(0);
+         /* transition-delay: 3s;*/  /*样式延迟时间*/
+        }
+        div:hover span:nth-child(1){
+          transition-delay: 0.05s;
+        }
+        div:hover span:nth-child(2){
+          transition-delay: 0.15s;
+        }
+        div:hover span:nth-child(3){
+          transition-delay: 0.1s;
+        }
+        div:hover span:nth-child(4){
+          transition-delay: 0.2s;
+        }
+        h3{
+          width: 100%;
+          font-size: 25px;
+          color: #fff;
+          text-align: center;
+          transition-duration: 0.3s;
+        }
+        div:hover h3{
+          transform: translateY(-70px);
+        }
+       </style>
+          
+    </head>
+    <body>
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <h3>STEVE THOMAS</h3>
+      </div>
+    </body>
+</html>

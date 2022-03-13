@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>旋转立方体</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#warp{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			/*background-color: green;*/
+			margin: 100px auto;
+		}
+		.box{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			/*background-color: pink;*/
+			transform-style: preserve-3d;
+			animation: move 10s infinite linear; 
+		}
+		.out-div{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transition: all 1s ease-in;
+		}
+		.out-div img{
+			height: 100%;
+			height: 100%;
+		}
+		.out-front{
+			transform: translateZ(100px);
+		}
+		.out-back{
+			transform: translateZ(-100px);
+		}
+		.out-left{
+			transform: translateX(-100px) rotateY(90deg);
+		}
+		.out-right{
+			transform: translateX(100px) rotateY(-90deg);
+		}
+		.out-top{
+			transform: translateY(-100px) rotateX(90deg);
+		}
+		.out-bottom{
+			transform: translateY(100px) rotateX(-90deg);
+		}
+		#warp:hover .out-front{
+			transform: translateZ(200px);
+		}
+		#warp:hover .out-back{
+			transform: translateZ(-200px);
+		}
+		#warp:hover .out-left{
+			transform: translateX(-200px) rotateY(90deg);
+		}
+		#warp:hover .out-right{
+			transform: translateX(200px) rotateY(-90deg);
+		}
+		#warp:hover .out-top{
+			transform: translateY(-200px) rotateX(90deg);
+		}
+		#warp:hover .out-bottom{
+			transform: translateY(200px) rotateX(-90deg);
+		}
+		@keyframes move{
+			0%{
+				transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			100%{
+				transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="warp">
+		<div class="box">
+			<div class="out-div out-front">
+				<img src="images/1.jpg">
+			</div>
+			<div class="out-div out-back">
+				<img src="images/2.jpg">
+			</div>
+			<div class="out-div out-left">
+				<img src="images/3.jpg">
+			</div>
+			<div class="out-div out-right">
+				<img src="images/4.jpg">
+			</div>
+			<div class="out-div out-top">
+				<img src="images/5.jpg">
+			</div>
+			<div class="out-div out-bottom">
+				<img src="images/6.jpg">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

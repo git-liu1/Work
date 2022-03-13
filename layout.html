@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>微场景页面布局</title>
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* background: #34495e; */
+            display: grid;
+            grid-template-rows: 10vh 1fr 10vh;
+        }
+        
+        header {
+            background: #e67e22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+            animation-name: layout;
+            animation-duration: .5s;
+        }
+        
+        main {
+            background: url('img/1.jpg') no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation-name: main;
+            animation-duration: .5s;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+        
+        div {
+            width: 80vw;
+            border-radius: 10px;
+            padding: 10px;
+            color: #fff;
+            opacity: .8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+        }
+        
+        div:nth-child(1) {
+            background: #8e44ad;
+            transform: translateY(-50px);
+            animation-name: main;
+            animation-duration: .5s;
+            animation-delay: 3s;
+            animation-fill-mode: backwards;
+        }
+        
+        div:nth-child(2) {
+            background: #e74c3c;
+            animation-name: main;
+            animation-duration: .5s;
+            animation-delay: 3.5s;
+            animation-fill-mode: backwards;
+        }
+        
+        footer {
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #fff;
+            /* transform: scale(0); */
+            /* animation-fill-mode: forwards; */
+            animation-fill-mode: backwards;
+            animation-name: rotate;
+            animation-duration: .5s;
+            animation-delay: 1s;
+        }
+        
+        @keyframes layout {
+            from {
+                transform: translateX(-100vw);
+            }
+            to {
+                transform: translateX(0vw);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: scale(0) rotate(360deg);
+            }
+            to {
+                transform: scale(1) rotate(0);
+            }
+        }
+        
+        @keyframes main {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>xiaoliu</header>
+    <main>
+        <div>The Qingmingor Ching Mingfestival, also known as Tomb-Sweeping Dayin English (sometimes also called Chinese Memorial Dayor Ancestors' Day), is a traditional Chinese festivalobserved by the Han Chineseand the Chittyof Indonesia, Malaysia, Singapore
+            and Thailand. It falls on the first day of the fifth solar termof the traditional Chineselunisolarcalendar.</div>
+        <div>
+            During Qingming, Chinese families visit the tombs of their ancestors to clean the gravesites(n.墓地), pray to their ancestors, and make ritual offerings. Offerings would typically include traditional food dishes, and the burning of joss sticks (祭祀用的香)and
+            joss paper(纸钱). The holiday recognizes the traditional reverence(n. 崇敬；崇拜) of one's ancestorsin Chinese culture.
+        </div>
+    </main>
+    <footer>xiaoliu.com</footer>
+</body>
+
+</html>

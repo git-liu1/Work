@@ -1,0 +1,110 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <title>css3遮罩层</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: #242424;
+            }
+            
+            .warp {
+                width: 960px;
+                height: 400px;
+                margin: 50px auto;
+            }
+            
+            .content {
+                float: left;
+                position: relative;
+                width: 260px;
+                height: 160px;
+                margin: 24px;
+                border: 1px solid #fff;
+                transition: .8s;
+            }
+            
+            .content img {
+                width: 240px;
+                height: 140px;
+                padding: 10px;
+            }
+            
+            .hide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 260px;
+                height: 160px;
+                background-color: rgba(0, 0, 0, .5);
+                transition: .8s;
+            }
+            
+            .content:hover {
+                transform: scale(1.3);
+            }
+            
+            .content:hover .hide {
+                height: 0;
+            }
+            
+            .content1:hover .hide {
+                width: 0;
+            }
+            
+            .content2:hover .hide {
+                width: 0;
+                margin-left: 130px;
+            }
+            
+            .content3:hover .hide {
+                height: 0;
+                margin-left: 130px;
+            }
+            
+            .content4:hover .hide {
+                height: 0;
+                margin-top: 80px;
+            }
+            
+            .content5:hover .hide {
+                height: 0;
+                margin-right: 130px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="warp">
+            <div class="content">
+                <img src="images/1.jpg">
+                <div class="hide"></div>
+            </div>
+            <div class="content content1">
+                <img src="images/2.jpg">
+                <div class="hide"></div>
+            </div>
+            <div class="content content2">
+                <img src="images/3.jpg">
+                <div class="hide"></div>
+            </div>
+            <div class="content content3">
+                <img src="images/4.jpg">
+                <div class="hide"></div>
+            </div>
+            <div class="content content4">
+                <img src="images/5.jpg">
+                <div class="hide"></div>
+            </div>
+            <div class="content content5">
+                <img src="images/6.jpg">
+                <div class="hide"></div>
+            </div>
+        </div>
+    </body>
+
+    </html>

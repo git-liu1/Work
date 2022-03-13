@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="乌拉老师">
+    <title>小鸟</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(39, 40, 59);
+        }
+        
+        .brid {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            /*background-color:blue;*/
+        }
+        
+        .brid .big,
+        .middle,
+        .small {
+            position: absolute;
+            border-style: solid;
+            border-radius: 50%;
+            transition: 1s;
+            transform: rotate(45deg);
+        }
+        
+        .big {
+            border-width: 100px;
+            border-color: transparent transparent #ff0000 #ff0000;
+            /*transparent为透明色*/
+        }
+        
+        .middle {
+            top: 10%;
+            left: 10%;
+            border-width: 80px;
+            border-color: #ffff00 transparent #fff #fff;
+        }
+        
+        .small {
+            top: 30%;
+            left: 30%;
+            border-width: 40px;
+            border-color: transparent #ffcc00 transparent transparent;
+        }
+        
+        .small:after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        
+        .brid:hover .big {
+            transform: rotate(225deg);
+            border-color: transparent transparent #00ffff #33ffff;
+        }
+        
+        .brid:hover .middle {
+            transform: rotate(-135deg);
+            border-color: transparent #ffff00 #fff #fff;
+        }
+        
+        .brid:hover .small {
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brid">
+        <div class="big"></div>
+        <div class="middle"></div>
+        <div class="small"></div>
+
+    </div>
+</body>
+
+</html>

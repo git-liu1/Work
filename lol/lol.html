@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <title>
+    </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 820px;
+            height: 375px;
+            background-color: #e69be6;
+            margin-top: 220px;
+            margin-left: 25px;
+        }
+        
+        div ul {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            list-style: none;
+            width: 820px;
+            height: 375px;
+            padding: 0;
+            background-color: #00cc99;
+        }
+        
+        div ul li {
+            flex: 1;
+            height: 35px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            background-color: #e3e2e2;
+        }
+        
+        div ul li:hover {
+            background-color: #f7f6f6;
+            color: #cea861;
+        }
+        
+        div ul li img {
+            position: absolute;
+            opacity: 0;
+            /*透明度*/
+            left: 0;
+            top: 0;
+            width: 820px;
+            height: 340px;
+        }
+        
+        div ul li:nth-child(1) img {
+            opacity: 1;
+        }
+        
+        div ul li:hover img {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>千纸童话城堡
+                <img src="images/1.png">
+            </li>
+            <li>千纸传说
+                <img src="images/2.jpg"></li>
+            <li>无限乱斗延长开放
+                <img src="images/3.jpg">
+            </li>
+            <li>
+                LPL3月6日赛程
+                <img src="images/4.png">
+            </li>
+            <li>
+                崔丝塔娜新皮肤投票
+                <img src="images/5.jpg">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

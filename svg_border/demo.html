@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <title>svg</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url('images/bg.jpg');
+            background-repeat: no-repeat;
+        }
+        
+        .pic {
+            width: 1280px;
+            height: 435px;
+            margin: 100px auto 100px auto;
+        }
+        
+        .pic ul {
+            display: flex;
+            flex-wrap: wrap;
+            /*强制换行*/
+            justify-content: space-between;
+            /*两端对齐*/
+            align-items: center;
+            /*上下居中*/
+            list-style: none;
+            width: 1280px;
+            height: 435px;
+        }
+        
+        .pic ul li {
+            width: 420px;
+            height: 200px;
+            background-image: url('images/1.jpg');
+            background-repeat: no-repeat;
+            background-position: 0px 10px;
+            transition: 0.5s;
+        }
+        
+        .pic ul li:nth-child(2) {
+            background-image: url('images/2.jpg');
+        }
+        
+        .pic ul li:nth-child(3) {
+            background-image: url('images/3.jpg');
+        }
+        
+        .pic ul li:nth-child(4) {
+            background-image: url('images/4.jpg');
+        }
+        
+        .pic ul li:nth-child(5) {
+            background-image: url('images/5.jpg');
+        }
+        
+        .pic ul li:nth-child(6) {
+            background-image: url('images/6.jpg');
+        }
+        
+        .pic ul li:hover {
+            background-position: 0px 0px;
+        }
+        
+        svg {
+            /* background-color: #fff;*/
+        }
+        
+        polyline {
+            stroke: blue;
+            /*线段颜色*/
+            stroke-width: 3px;
+            /*线段宽的*/
+            fill: none;
+            /*不填充颜色*/
+            stroke-dasharray: 1180px;
+            /*线段的总长*/
+            stroke-dashoffset: 1180px;
+            /*未描绘的线段
+       */
+            transition: 2s;
+            /*过渡时间*/
+        }
+        
+        .pic ul li:hover polyline {
+            stroke-dashoffset: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic">
+        <ul>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg>
+                <!-- 可伸缩的矢量图形绘画 -->
+            </li>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg></li>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg></li>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg></li>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg></li>
+            <li><svg width="420" height="210">
+              <polyline points="10,10 410,10 410,200 10,200 10,10"></polyline>  <!-- 折线 -->
+            </svg></li>
+        </ul>
+    </div>
+</body>
+
+</html>

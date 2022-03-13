@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="utf-8" />
+   <meta name="Keywords" content="" />
+   <meta name="Description" content="" />
+     <title>
+     </title>
+     <style>
+      *{
+        margin: 0;
+      }
+      .warp{
+        width: 1200px;
+        height: 360px;
+        background-color: #00cc33;
+        margin-top: 50px;
+        margin-left: 90px;
+      }
+      .warp ul{
+        display: flex;  /*弹性盒模型 使内部元素横向排序*/
+        flex-wrap: wrap;   /*强制性换行*/
+        justify-content: space-around;  /*左右均分*/
+        align-items: center;    /*上下均分*/
+        list-style: none;
+        width: 1200px;
+        height: 360px;
+        background-color: #66ccff;
+      }
+      .warp ul li{
+        width: 360px;
+        height: 139px;
+        border:1px solid red;
+      }
+      .warp ul li img{
+        width: 360px;
+        height: 139px;
+      }
+      .title{
+        width: 360px;
+        height: 139px;
+        text-align: center;
+        line-height: 139px;
+        background-color: rgba(255,255,255,0.6);
+        transform: translateY(-143px) scale(0);
+        transition: 1s;
+      }
+      .warp ul li:hover .title{
+        transform: translateY(-143px) scale(1);
+      }
+     </style>
+     </head>
+     <body>
+      <div class="warp">
+        <ul>
+          <li>
+            <img src="images/1.jpg">
+            <div class="title">美味牛排</div>
+          </li>
+          <li>
+            <img src="images/2.jpg">
+          <div class="title">家庭内部家常饭聚餐</div>
+          </li>
+          <li>
+            <img src="images/3.jpg">
+            <div class="title">新鲜蔬菜水果</div>
+          </li>
+          <li>
+            <img src="images/4.jpg">
+            <div class="title">一堆新鲜的水果</div>
+          </li>
+          <li>
+            <img src="images/5.jpg">
+            <div class="title">火锅</div>
+          </li>
+          <li>
+            <img src="images/6.jpg">
+            <div class="title">美食龙虾</div>
+          </li>
+        </ul>
+      </div>
+     </body>
+     </html>

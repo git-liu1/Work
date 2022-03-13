@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>三维幻灯片</title>
+    <style type="text/css" media="screen">
+        body {
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            display: flex;
+            /* border: solid 5px silver; */
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: perspective(900px);
+            transition: 2s;
+            transform-origin: 200px 100px -100px;
+            /*旋转的中心点  分别代表x、y、z*/
+        }
+        
+        div {
+            position: absolute;
+            background: #27ae60;
+            font-size: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center center 100px;
+            opacity: .7;
+        }
+        
+        body:hover main {
+            transform: perspective(900px) rotateX(350deg);
+        }
+        
+        div:nth-child(1) {
+            width: 400px;
+            height: 200px;
+            background: #e67e22;
+        }
+        
+        div:nth-child(2) {
+            width: 400px;
+            height: 200px;
+            background: #2980b9;
+            transform: translateZ(-200px);
+        }
+        
+        div:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: #e74c3c;
+            transform-origin: left;
+            transform: rotateY(90deg);
+        }
+        
+        div:nth-child(4) {
+            width: 200px;
+            height: 200px;
+            background: #e74c3c;
+            transform-origin: right;
+            transform: translateX(200px) rotateY(-90deg);
+        }
+        
+        div:nth-child(5) {
+            width: 400px;
+            height: 200px;
+            background: #2980b9;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        div:nth-child(6) {
+            width: 400px;
+            height: 200px;
+            background: #2980b9;
+            transform-origin: bottom;
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>奔跑的小绵羊</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-image: url('images/bg.jpg');
+        }
+        
+        .sheep {
+            position: relative;
+            width: 160px;
+            height: 120px;
+            background-image: url('images/sheep.png');
+            animation: run 1s infinite steps(7), run2 5s infinite;
+        }
+        
+        .sheep:nth-child(1) {
+            position: absolute;
+            top: 80%;
+            left: 10%;
+        }
+        
+        .sheep:nth-child(2) {
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            animation-duration: 4s;
+        }
+        
+        .sheep:nth-child(3) {
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            animation-duration: 5s;
+        }
+        
+        .sheep:nth-child(4) {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            animation-duration: 5s;
+        }
+        
+        .sheep:nth-child(5) {
+            position: absolute;
+            top: 80%;
+            left: 60%;
+            animation-duration: 5s;
+        }
+        
+        @keyframes run {
+            0% {
+                background-position-x: 0%;
+            }
+            100% {
+                background-position-x: 100%;
+            }
+        }
+        
+        @keyframes run2 {
+            0% {
+                transform: translateX(500px);
+            }
+            100% {
+                transform: translateX(-100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sheep"></div>
+    <div class="sheep"></div>
+    <div class="sheep"></div>
+    <div class="sheep"></div>
+    <div class="sheep"></div>
+</body>
+
+</html>

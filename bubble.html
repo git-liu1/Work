@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <title>气泡</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black
+        }
+        
+        .bubble {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            filter: blur(10px) contrast(20);
+            /*过滤  高斯模糊*/
+            background-color: black;
+        }
+        
+        .circle {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        
+        .circle:nth-child(2) {
+            animation: circle 2s infinite alternate linear;
+        }
+        
+        @keyframes circle {
+            from {
+                box-shadow: 350px 0px 0px white;
+                /*x(正值右)  y(上面负)  第三羽化*/
+            }
+            to {
+                box-shadow: -350px 0px 0px white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bubble">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>捕鱼达人</title>
+    <style>
+        body {
+            background-image: url('images/bg.jpg');
+        }
+        
+        .fish {
+            width: 174px;
+            height: 126px;
+            background-image: url('images/1.png');
+            animation: go 2s infinite steps(11), go1 22s infinite;
+        }
+        
+        .shark {
+            width: 509px;
+            height: 270px;
+            background-image: url('images/2.png');
+            animation: go 2s infinite steps(11), go2 25s infinite;
+        }
+        
+        @keyframes go {
+            0% {
+                background-position-y: 0%;
+            }
+            100% {
+                background-position-y: 100%;
+            }
+        }
+        
+        @keyframes go1 {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(800px, 100px) rotate(90deg);
+            }
+            100% {
+                transform: translate(0px, 0px) rotate(360deg);
+            }
+        }
+        
+        @keyframes go2 {
+            0% {
+                transform: translate(-500px, 0px);
+            }
+            100% {
+                transform: translate(1500px, 0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fish"></div>
+    <div class="shark"></div>
+</body>
+
+</html>

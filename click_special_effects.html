@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>点击弹幕效果</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #content div {
+            width: auto;
+            display: inline;
+            position: absolute;
+            opacity: 0.9;
+            animation: up 3s ease-in 0s 1 forwards;
+        }
+        
+        @keyframes up {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-150px);
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script>
+        var words = new Array(
+            "小刘喜欢码农",
+            "Hello World",
+            "再顾倾人国",
+            "2022月收入一亿哦",
+            "绝世而独立",
+            "一顾倾人城",
+            "北方有佳人",
+            "一路向北",
+            "宁不知倾城与倾国",
+            "佳人难再得"
+        );
+        var colors = new Array(
+            "#19CAAD",
+            "#8CC7B5",
+            "#A0EEE1",
+            "#BEE7E9",
+            "#BEEDC7",
+            "#D6D5B7",
+            "#D1BA74",
+            "#E6CEAC",
+            "#ECAD9E",
+            "#F4606C"
+        );
+
+        let cont = document.getElementById("content");
+        window.onmousedown = (e) => {
+            let div = document.createElement("div"),
+                downX = e.clientX,
+                downY = e.clientY;
+            div.style.top = downY + "px";
+            div.style.left = downX + "px";
+            div.innerHTML = words[Math.floor(Math.random() * 10)];
+            div.style.color = colors[Math.floor(Math.random() * 10)];
+            cont.appendChild(div);
+            let x = 0;
+            setTimeout(function() {
+                cont.removeChild(div);
+            }, 1000);
+        };
+    </script>
+</body>
+
+</html>

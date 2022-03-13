@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>果冻动画</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .jelly {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 200px auto 0;
+            filter: blur(10px) contrast(200);
+            /*过滤 高斯模糊 对比度*/
+            border-radius: 50%;
+            background-color: black;
+        }
+        
+        .jelly div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            border-radius: 50%;
+            animation: jelly 1s infinite;
+        }
+        
+        .jelly div:nth-child(1) {
+            transform: translateY(-200px);
+            background-color: red;
+        }
+        
+        .jelly div:nth-child(2) {
+            transform: translateY(200px);
+            background-color: blue;
+            animation-delay: 1.5s;
+        }
+        
+        .jelly div:nth-child(3) {
+            transform: translateX(-200px);
+            background-color: yellow;
+            animation-delay: .5s;
+        }
+        
+        .jelly div:nth-child(4) {
+            transform: translateX(200px);
+            background-color: green;
+            animation-delay: 1s;
+        }
+        
+        @keyframes jelly {
+            0% {
+                transform: translate(0, 0);
+            }
+            /*100%{
+				transform: translate(0,0);
+			}*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jelly">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

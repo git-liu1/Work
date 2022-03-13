@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>旋转的风车</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @keyframes animation {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .box {
+            display: flex;
+            /*将容器设置为伸缩盒,和设置float效果一样*/
+            flex-wrap: wrap;
+            /*换行*/
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+            /*border:1px solid red;*/
+            position: relative;
+            /*相对*/
+            animation-name: animation;
+            /*动画名称*/
+            animation-duration: 1.5s;
+            /*动画持续时间*/
+            animation-iteration-count: infinite;
+            /*循环次数infinite无限循环*/
+            animation-timing-function: linear;
+            /*动画的过度类型  linear线性过渡*/
+        }
+        
+        .box:hover {
+            animation-play-state: paused;
+            /*当鼠标按下时暂停*/
+        }
+        
+        .circle {
+            position: absolute;
+            /*绝对*/
+            left: 188px;
+            top: 189px;
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            background: #000;
+        }
+        
+        .box1 {
+            width: 200px;
+            height: 100px;
+            background: red;
+            border-radius: 100px 100px 0 0;
+            /*左上角,右上角,右下角,左下角*/
+            margin-top: 100px;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 200px;
+            background: yellow;
+            border-radius: 0 100px 100px 0;
+        }
+        
+        .box3 {
+            width: 100px;
+            height: 200px;
+            background: green;
+            border-radius: 100px 0 0 100px;
+            margin-top: 200px;
+            margin-left: -200px;
+        }
+        
+        .box4 {
+            width: 200px;
+            height: 100px;
+            background: purple;
+            border-radius: 0 0 100px 100px;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="circle"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

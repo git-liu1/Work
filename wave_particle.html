@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <title>波动粒子</title>
+    <style>
+        body {
+            background: #252A34;
+        }
+        
+        .warp {
+            margin: 250px auto;
+            width: 620px;
+            height: 30px;
+        }
+        
+        .bar {
+            float: left;
+            margin: 15px;
+            width: 30px;
+            height: 30px;
+            animation: fengyu 1.2s infinite;
+            /*transform: translate()*/
+            ;
+        }
+        
+        @keyframes fengyu {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+                border-radius: 0%;
+            }
+            50% {
+                transform: translateY(200px) rotate(145deg);
+                border-radius: 50%;
+            }
+        }
+        
+        .bar:nth-child(2n-1) {
+            background: #ff2e63;
+        }
+        
+        .bar:nth-child(2n) {
+            background: #08d9d6;
+        }
+        
+        .bar:nth-child(2) {
+            animation-delay: 0.1s;
+            /*animation-delay: 动画延迟*/
+        }
+        
+        .bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        .bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        
+        .bar:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        
+        .bar:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        
+        .bar:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        
+        .bar:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        
+        .bar:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+        
+        .bar:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+
+    </div>
+</body>
+
+</html>

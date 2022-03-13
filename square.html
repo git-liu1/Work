@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3d立方体</title>
+    <style type="text/css" media="screen">
+        body {
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            display: flex;
+            /* border: solid 5px silver; */
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotateX(-45deg);
+            transition: 2s;
+            transform-origin: center center 100px;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: #27ae60;
+            font-size: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center center 100px;
+            opacity: .7;
+        }
+        
+        body:hover main {
+            transform: perspective(900px) rotateX(185deg) rotateY(185deg);
+        }
+        
+        div:nth-child(1) {
+            background: #e67e22;
+            transform: rotateY(90deg);
+        }
+        
+        div:nth-child(2) {
+            background: #2980b9;
+            transform: rotateY(180deg);
+        }
+        
+        div:nth-child(3) {
+            background: #e74c3c;
+            transform: rotateY(270deg);
+        }
+        
+        div:nth-child(4) {
+            background: #8e44dd;
+            transform: rotateY(360deg);
+        }
+        
+        div:nth-child(5) {
+            background: #e67e22;
+            transform: rotateX(90deg);
+            transform-origin: top;
+        }
+        
+        div:nth-child(6) {
+            background: #e67e22;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>摩天轮</title>
+    <style>
+        body {
+            margin: o;
+        }
+        
+        .ferriswheel {
+            width: 768px;
+            height: 768px;
+            background-image: url('images/fsw.png');
+            margin: 0px auto;
+            animation: changeRotate 5s infinite linear;
+        }
+        
+        @keyframes changeRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .child1,
+        .child2,
+        .child3 {
+            position: relative;
+            width: 130px;
+            height: 170px;
+            animation: changeRotate1 5s infinite linear;
+        }
+        
+        @keyframes changeRotate1 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        
+        .child1 {
+            background-image: url('images/boy.png');
+            top: 200px;
+            left: 0px;
+        }
+        
+        .child2 {
+            background-image: url('images/girl.png');
+            top: 419px;
+            left: 130px;
+        }
+        
+        .child3 {
+            background-image: url('images/girl.png');
+            top: 0px;
+            left: 642px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ferriswheel">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+
+</body>
+
+</html>

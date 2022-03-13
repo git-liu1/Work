@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹跳小球</title>
+    <style type="text/css" media="screen">
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(at center, #e67e22, #e74c3c);
+            border-radius: 50%;
+            animation-name: ball;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        section {
+            width: 300px;
+            height: 40px;
+            background: rgba(0, 0, 0, .3);
+            position: absolute;
+            transform: translateY(50px);
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(5px);
+            animation-name: shadow;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes shadow {
+            to {
+                width: 300px;
+                height: 20px;
+                filter: blur(35px);
+                background: rgba(0, 0, 0, .1);
+            }
+        }
+        
+        @keyframes ball {
+            to {
+                transform: translateY(-300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <section></section>
+</body>
+
+</html>
